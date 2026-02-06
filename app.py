@@ -8,14 +8,9 @@ st.set_page_config(page_title="HR Dashboard", layout="wide")
 st.title("📊 HR Dashboard - Employee Management")
 
 # ===========================
-# INITIALISATION DES DONNÉES
-# ===========================
 if "employees" not in st.session_state:
     st.session_state.employees = []
 
-# ===========================
-# CREATE (AJOUT)
-# ===========================
 st.subheader("➕ Add Employee")
 
 with st.form("add_employee_form"):
@@ -32,9 +27,7 @@ with st.form("add_employee_form"):
         })
         st.success("Employee added successfully ✅")
 
-# ===========================
-# READ (AFFICHAGE)
-# ===========================
+
 st.markdown("---")
 st.subheader("📋 Employee List")
 
@@ -48,16 +41,12 @@ else:
         col2.write(emp["role"])
         col3.write(f"{emp['salary']} MAD")
 
-        # ===========================
-        # DELETE
-        # ===========================
+      =
         if col4.button("❌ Delete", key=f"delete_{i}"):
             st.session_state.employees.pop(i)
             st.experimental_rerun()
 
-# ===========================
-# UPDATE (MODIFICATION)
-# ===========================
+
 st.markdown("---")
 st.subheader("✏️ Update Employee")
 
