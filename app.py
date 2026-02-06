@@ -38,7 +38,7 @@ else:
         col2.write(emp["role"])
         col3.write(f"{emp['salary']} MAD")
 
-      =
+      
         if col4.button("❌ Delete", key=f"delete_{i}"):
             st.session_state.employees.pop(i)
             st.experimental_rerun()
