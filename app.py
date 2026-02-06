@@ -1,13 +1,10 @@
 import streamlit as st
 
-# ===========================
-# CONFIGURATION
-# ===========================
+
 st.set_page_config(page_title="HR Dashboard", layout="wide")
 
 st.title("📊 HR Dashboard - Employee Management")
 
-# ===========================
 if "employees" not in st.session_state:
     st.session_state.employees = []
 
@@ -74,9 +71,7 @@ if st.session_state.employees:
             st.success("Employee updated successfully ✨")
             st.experimental_rerun()
 
-# ===========================
-# FOOTER
-# ===========================
+
 st.markdown("---")
 st.caption("© 2026 HR Dashboard - Streamlit CRUD (No Database)")
 
